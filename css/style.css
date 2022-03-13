@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+  overflow: hidden;
+}
+body::before{
+  content: "";
+  position: absolute;
+  left: -320px;
+  top: -80%;
+  background-image: url(../images/bg-pattern-top.svg);
+  background-position: top;
+  background-size: cover;
+  width: 978px;
+  height: 978px;
+}
+body::after{
+  content: "";
+  position: absolute;
+  right: -280px;
+  bottom: -105%;
+  width: 978px;
+  height: 978px;
+  background-image: url(../images/bg-pattern-bottom.svg);
+  background-size: cover;
+}
+@media (max-width: 767px){
+  body::before{
+    display: none;
+  }
+  body::after{
+    display: none;
+  }
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  width: fit-content;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container .image{
+  position: relative;
+}
+.container .image img.card{
+  width: 100%;
+}
+.container .image img.avatar{
+  position: absolute;
+  bottom: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.container .text{
+  margin-top: 60px;
+}
+.container .text h3{
+  display: inline-block;
+  margin: 15px 5px 10px;
+  color: hsl(229, 23%, 23%);
+  font-size: 18px;
+  font-weight: 700;
+}
+.container .text .count{
+  color: hsl(0, 0%, 59%);
+}
+.container .text p{
+  color: hsl(0, 0%, 59%);
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container .footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.container .footer .num{
+  text-align: center;
+}
+.container .footer span{
+  color: hsl(229, 23%, 23%);
+  margin-bottom: 5px;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+}
+.container .footer p{
+  color: hsl(0, 0%, 59%)
+}
